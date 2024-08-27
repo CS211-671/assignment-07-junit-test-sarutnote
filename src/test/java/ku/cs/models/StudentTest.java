@@ -34,13 +34,18 @@ class StudentTest {
     }
 
     @Test
+    @DisplayName("ทดสอบChangeName")
     void testChangeName(){
         s1.changeName("NooJon");
         assertEquals("NooJon", s1.getName());
     }
 
     @Test
-
-
+    @DisplayName("ทดสอบToString")
+    public void testToString() {
+        String expected = "{id: '6610451133', name: 'Note', score: 80.0}";
+        s1.addScore(80);
+        assertEquals(expected, s1.toString());
+    }
 
 }
